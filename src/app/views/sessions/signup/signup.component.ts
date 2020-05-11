@@ -1,4 +1,4 @@
-import { hrayrDemoAnimations } from 'app/shared/animations/hrayrDemo-animations';
+import { hrayrDemoAnimations } from 'app/shared/animations/hrayrdemo-animations';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Validators, FormGroup, FormControl } from '@angular/forms';
 import { JwtAuthService } from 'app/shared/services/auth/jwt-auth.service';

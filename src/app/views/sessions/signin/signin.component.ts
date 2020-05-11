@@ -1,4 +1,4 @@
-import { hrayrDemoAnimations } from 'app/shared/animations/hrayrDemo-animations';
+import { hrayrDemoAnimations } from 'app/shared/animations/hrayrdemo-animations';
 import { Component, OnInit, ViewChild, OnDestroy, AfterViewInit, ElementRef } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Validators, FormGroup, FormControl, NgModel } from '@angular/forms';

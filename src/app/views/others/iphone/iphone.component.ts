@@ -1,4 +1,4 @@
-import { hrayrDemoAnimations } from "app/shared/animations/hrayrDemo-animations";
+import { hrayrDemoAnimations } from "app/shared/animations/hrayrdemo-animations";
 import {
   Component,
   OnInit,

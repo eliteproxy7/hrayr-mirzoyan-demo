@@ -11,7 +11,7 @@ import { Subscription } from "rxjs";
 import { LayoutService } from '../../../services/layout.service';
 import { filter } from 'rxjs/operators';
 import { JwtAuthService } from '../../../services/auth/jwt-auth.service';
-import { hrayrDemoAnimations } from 'app/shared/animations/hrayrDemo-animations';
+import { hrayrDemoAnimations } from 'app/shared/animations/hrayrdemo-animations';
 
 
 

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { hrayrDemoAnimations } from 'app/shared/animations/hrayrDemo-animations';
+import { hrayrDemoAnimations } from 'app/shared/animations/hrayrdemo-animations';
 
 @Component({
   selector: 'app-nav-icon',

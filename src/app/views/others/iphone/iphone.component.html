@@ -1,0 +1,54 @@
+<div class="iphone iphone-container">
+    <div class="iphone_holder" fxFlex fxLayout="row" fxLayoutAlign="space-between stretch">
+        <div fxFlex="65" class="frame-left" fxLayout="column" fxLayoutAlign="space-between stretch">
+            <div class="frame-left-top" fxFlex="grow">
+                <h5 class="subtitle">iPhone</h5>
+                <h1 class="title">The ultimate iPhone</h1>
+                <p class="desc">
+                    The future is here. Join the iPhone Upgrade <br />Program to get the latest iPhone - NOW!
+                </p>
+            </div>
+
+            <div class="frame-left-bottom" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="frame-left-bottom-left">
+                    <div class="price">From $699</div>
+                    <a href="#" class="cta">Buy Now ></a>
+                </div>
+                <div class="frame-left-bottom-right">
+                    <div class="devices" fxLayout="row" fxLayoutAlign="space-between center">
+                        <img class="devices_thumb" (click)="setDeviceToFront(false)" [ngStyle]="{ opacity: 1 - (deviceOPUniversal / 200) * 0.8 }" src="assets/images/iphone_device_front.png" />
+                        <img class="devices_thumb" (click)="setDeviceToFront(true)" [ngStyle]="{ opacity: 0.2 + (deviceOPUniversal / 200) * 0.8 }" src="assets/images/iphone_device_back.png" />
+                    </div>
+                    <div class="scroller">
+                        <div class="slider">
+                            <div class="slides" #widgetsContent (scroll)="getScrollWidth($event)">
+                                <div></div>
+                                <div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+    <div fxFlex fxFlex="35" fxLayoutAlign="center center" class="frame-right">
+        <div class="device_large_holder">
+            <img class="device_large_item device_large_front" [ngStyle]="{
+              opacity: 1 - deviceOPUniversal / 200,
+              transform:
+                'translateX(' +
+                (deviceOPUniversal + deviceOPUniversal * 0.25) +
+                'px)'
+            }" src="assets/images/iphone_device_large_front.png" />
+            <img class="device_large_item device_large_back" [ngStyle]="{
+              opacity: deviceOPUniversal / 200,
+              transform:
+                'translateX(' +
+                (250 - (deviceOPUniversal + deviceOPUniversal * 0.25)) +
+                'px)'
+            }" src="assets/images/iphone_device_large_back.png" />
+        </div>
+    </div>
+  </div>
+</div>

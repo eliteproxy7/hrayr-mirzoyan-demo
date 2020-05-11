@@ -1,0 +1,14 @@
+<div class="app-wrap" [ngClass]="{'header-full':this.layoutConf.fullHeader, 'header-peak': this.layoutConf.headerPeak, 'layout_width--shrink': this.layoutConf.bodyShrink}">
+    <!-- App content -->
+    <div class="main-content-wrap" id="main-content-wrap">
+        <app-header-side>
+        </app-header-side>
+        <div class="main-content-hold" id="main-content-hold">
+            <!-- View outlet -->
+            <div class="container-dynamic" [@routerAnimations]="prepareRouteTransition(outlet)">
+                <router-outlet #outlet="outlet"></router-outlet>
+            </div>
+        </div>
+        <app-nav-icon class="right-icon-nav" *ngIf="sideNavIconsShow" [@inOutAnimationY]></app-nav-icon>
+    </div>
+</div>

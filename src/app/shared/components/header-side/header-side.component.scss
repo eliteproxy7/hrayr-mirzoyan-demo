@@ -1,0 +1,33 @@
+.header-nav {
+  margin-right: 100px;
+
+  &-item {
+    font-size: 20px;
+    color: #707070;
+    text-decoration: none;
+    transition: all 0.4s cubic-bezier(0.35, 0, 0.25, 1);
+    margin-left: 50px;
+    &.active-link {
+      color: black;
+      text-shadow: 0 0 1px black, 0 0 0.65px black;
+    }
+    &.cta {
+      color: white;
+      border-radius: 23px;
+      background: #5ac8fa;
+      padding-top: 8px;
+      padding-bottom: 8px;
+      padding-left: 35px;
+      padding-right: 35px;
+
+      &:hover {
+        color: white;
+        background-color: black;
+      }
+    }
+    &:hover {
+      color: black;
+      text-shadow: 0 0 1px black, 0 0 0.65px black;
+    }
+  }
+}

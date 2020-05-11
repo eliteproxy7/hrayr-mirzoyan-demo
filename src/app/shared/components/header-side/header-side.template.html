@@ -1,0 +1,14 @@
+<div class="topbar">
+    <!-- Sidenav toggle button -->
+    <div class="logo-area" fxFlex="100" fxLayoutAlign="center center">
+        <a routerLink="/others/intro"><img src="assets/images/logo.svg"></a>
+    </div>
+    <div class="header-nav" fxFlex fxLayoutAlign="end center">
+
+        <a class="header-nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="/others/iphone">iPhone</a>
+        <a class="header-nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="/others/macbook">MacBook Pro</a>
+        <a class="header-nav-item" routerLinkActive="active-link" [routerLinkActiveOptions]="{exact: true}" routerLink="/others/iwatch">Watch</a>
+        <a (click)="signout()" class="header-nav-item cta">Notify me</a>
+    </div>
+
+</div>

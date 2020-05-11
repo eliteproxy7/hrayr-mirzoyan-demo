@@ -1,0 +1,36 @@
+<div class="watch" [ngClass]="{ 'page-animateIn': this.animateIn }">
+    <div class="watch_holder" fxFlex fxLayout="row" fxLayoutAlign="space-between stretch">
+        <div fxFlex="60" class="frame-left" fxLayout="column" fxLayoutAlign="space-between stretch">
+            <div class="frame-left-top" fxFlex="grow" fxLayout="column" fxLayoutAlign="space-between stretch">
+                <h5 class="subtitle">Apple Wacth</h5>
+                <h1 fxFlex="grow" class="title">Change starts within.</h1>
+                <p class="desc">
+                    Apple Watch Series 4. Fundamentally redesigned and re‑engineered to help you be even more active, healthy, and connected.
+                </p>
+            </div>
+
+            <div class="frame-left-bottom" fxLayout="row" fxLayoutAlign="space-between center">
+                <div class="frame-left-bottom-left">
+                    <div class="price">From $699</div>
+                    <a href="#" class="cta">Buy Now ></a>
+                </div>
+            </div>
+        </div>
+        <div fxFlex fxFlex="40" fxLayout="column" fxLayoutAlign="center center" class="frame-right">
+            <div class="device_large_holder">
+                <img class="device_large_item device_large_white" [(ngClass)]="'deviceChoice_' + deviceChoice" src="assets/images/watch_white.png" />
+                <img class="device_large_item device_large_black" src="assets/images/watch_black.png" />
+            </div>
+            <div class="device_navigation">
+                <div class="device_navigation_item">
+                    <input type="radio" id="device_watch_white" value="white" name="deviceChoice" class="" [(ngModel)]="deviceChoice" />
+                    <label for="device_watch_white">White</label>
+                </div>
+                <div class="device_navigation_item">
+                    <input type="radio" id="device_watch_black" value="black" name="deviceChoice" class="" [(ngModel)]="deviceChoice" />
+                    <label for="device_watch_black">Black</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

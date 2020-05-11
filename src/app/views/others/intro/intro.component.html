@@ -1,0 +1,9 @@
+<div class="intropage" [ngClass]="{'page-animateIn': this.animateIn}">
+    <div class="intropage_holder" (click)="gotoiPhone()" fxLayout="column" fxLayoutAlign="center center">
+        <div class="title">New Products Coming This Summer</div>
+        <div class="counter">
+            <tm-ng-odometer [number]="number" [config]="{value: 1111,format:'d' }"></tm-ng-odometer>
+        </div>
+        <div class="back-logo"><img src="assets/images/logo.svg"></div>
+    </div>
+</div>

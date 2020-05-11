@@ -1,0 +1,108 @@
+html {
+  font-size: 16px;
+}
+
+html, 
+body {
+  width: 100%;
+  position: relative;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-weight: $font-weight-base;
+  font-size: $font-size-base;
+  color: rgba(0, 0, 0, 0.87);
+  line-height: 1.5;
+  font-family: $font-family-base;
+
+}
+
+[tabindex='-1']:focus {
+  outline: none;
+}
+
+select,
+button,
+textarea,
+input {
+  vertical-align: baseline;
+}
+div {
+  box-sizing: border-box;
+}
+html, body {
+  &[dir=rtl], &[dir=ltr] {
+     unicode-bidi: embed
+  }
+}
+bdo[dir=rtl] {
+  direction: rtl;
+  unicode-bidi: bidi-override;
+}
+bdo[dir=ltr] {
+  direction: ltr;
+  unicode-bidi: bidi-override;
+}
+a, a:focus, a:hover {
+  text-decoration: none;
+}
+a {
+  color: inherit;
+}
+p {
+  margin: 0 0 16px;
+}
+.h1, 
+.h2, 
+.h3, 
+.h4, 
+.h5, 
+.h6, 
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+h6 {
+  margin-bottom: .5rem;
+  font-weight: 400;
+  line-height: 1.1;
+  color: inherit;
+}
+.h1,
+h1 {
+  font-size: 2rem;
+}
+.h2, 
+h2 {
+  font-size: 1.75rem;
+}
+.h3, 
+h3 {
+  font-size: 1.5rem;
+}
+.h4, 
+h4 {
+  font-size: 1.25rem;
+}
+.h5, 
+h5 {
+  font-size: 1rem;
+}
+.h6, 
+h6 {
+  font-size: .875rem;
+}
+code {
+  padding: 8px;
+  background: rgba(0, 0, 0, .08);
+}

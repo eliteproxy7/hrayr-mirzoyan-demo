@@ -1,0 +1,312 @@
+.signup-wrap {
+    position: relative;
+    &:before {
+        content: " ";
+        z-index: 0;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 60%;
+        background: linear-gradient(#88d7fc 0%, rgba(255, 255, 255, 0) 100%);
+    }
+    .form_error {
+        position: absolute;
+        right: 0;
+        top: 0;
+        color: #f4364c;
+    }
+}
+
+.signup-container {
+  position: relative;
+  opacity: 1;
+  transition: all 0.4s cubic-bezier(0.35, 0, 0.25, 1);
+  .signed-in-success & {
+    opacity: 0;
+  }
+}
+
+.signup-holder {
+    border: 1px solid #f2f2f2;
+    background-color: white;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);
+    position: relative;
+    overflow: hidden;
+}
+
+.signup-header {
+    position: relative;
+    color: white;
+    padding: 35px;
+    &>div {
+        z-index: 2;
+    }
+}
+
+.signup-header::before {
+  content: "";
+  top: 0;
+  left: 0;
+  display: block;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}
+
+.signup-small-image {
+    height: 24px;
+}
+
+.signup-form {
+    padding: remCalc(35px 50px 35px 50px);
+}
+
+.form-group.ng-invalid {
+    .ng-invalid {
+        border-color: #f4364c;
+    }
+}
+
+.form {
+    &-formlist {
+        transform: translateX(0);
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        transition: all 0.35s ease-out;
+        .singup-success & {
+            transform: translateX(-100%);
+        }
+    }
+    &-autosignin {
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        font-size: remCalc(16px);
+        line-height: 100%;
+        text-align: center;
+        transform: translateX(0);
+        transition: all 0.35s ease-out;
+        z-index: 1;
+        .loading-dots {
+            text-align: center;
+            width: 100%;
+            padding-top: remCalc(30);
+            opacity: 0;
+            transform: translateY(5px);
+            transition: all 0.35s 1s ease-out;
+            .singup-success & {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            &--dot {
+                animation: dot-keyframes 1.5s infinite ease-in-out;
+                background-color: #106cc8;
+                border-radius: 10px;
+                display: inline-block;
+                height: 10px;
+                width: 10px;
+                &:nth-child(2) {
+                    animation-delay: 0.5s;
+                    margin-left: remCalc(10px);
+                    margin-right: remCalc(10px);
+                }
+                &:nth-child(3) {
+                    animation-delay: 1s;
+                }
+            }
+        }
+        .loadingairplane_holder {
+            position: absolute;
+            z-index: 0;
+            top: 6.25rem;
+            overflow: hidden;
+            height: 245px;
+            width: 100%;
+            display: block;
+            .loadingairplane {
+                #airplane {
+                    animation: 1s cubic-bezier(0.5, 0, 0, 1) backwards airplane;
+                }
+                #cloud-top-right {
+                    animation: 1s ease-out 0.2s backwards topRightCloud;
+                }
+                #cloud-top-left {
+                    animation: 1s ease-out 0.5s backwards topLeftCloud;
+                }
+                #cloud-bottom-right {
+                    animation: 1s ease-out 0.3s backwards bottomRightCloud;
+                }
+            }
+        }
+        .singup-success & {
+            transform: translateX(-100%);
+        }
+        .loader {
+            width: 85px;
+            animation: loading 3s linear infinite;
+            .loading-inner {
+                stroke: {
+                    dashoffset: 0;
+                    dasharray: 300;
+                    width: 3;
+                    miterlimit: 10;
+                    linecap: round;
+                }
+                animation: loading-circle 2s linear infinite;
+                stroke: #5ac8fa;
+                fill: transparent;
+            }
+        }
+    }
+    &-input {
+        height: remCalc(54px);
+        font-size: remCalc(14px);
+        border-width: 1px;
+        border-color: rgba(#707070, 0.4);
+        background-color: #ffffff;
+        color: #000000;
+        border-style: solid;
+        display: block;
+        align-items: baseline;
+        box-sizing: border-box;
+        width: 100%;
+        padding-left: remCalc(30px);
+        padding-right: remCalc(30px);
+        font: inherit;
+        font-size: remCalc(14px);
+        transition: all 0.3s cubic-bezier(0.35, 0, 0.25, 1);
+        &:disabled,
+        button[disabled] {
+            border-style: dashed;
+            opacity: 0.55;
+        }
+        &::placeholder {
+            color: #ccc;
+        }
+        &:focus {
+            outline: none;
+            border-color: black;
+        }
+        &:-webkit-autofill,
+        &:-webkit-autofill:hover,
+        &:-webkit-autofill:focus {
+            font-size: remCalc(14px);
+        }
+        &:-webkit-autofill {
+            background: none !important;
+        }
+    }
+    &-label {
+        display: block;
+        padding-bottom: remCalc(10px);
+        font-size: remCalc(16px);
+        line-height: 100%;
+    }
+    &-group {
+        position: relative;
+        text-align: left;
+        margin-bottom: remCalc(27px);
+    }
+    &-button {
+        height: remCalc(54px);
+        width: remCalc(175px);
+        font-size: remCalc(14px);
+        margin-top: remCalc(15px);
+        margin-bottom: remCalc(15px);
+        color: white;
+        background-color: black;
+        font-weight: bold;
+        &:disabled,
+        button[disabled] {
+            background-color: #cccccc;
+            color: #666666;
+            cursor: default;
+        }
+    }
+    &-title {
+        font-size: remCalc(36);
+        font-weight: bold;
+        padding-bottom: remCalc(20);
+        padding-top: remCalc(65px);
+        line-height: 100%;
+        z-index: 3;
+        width: 100%;
+        padding-left: remCalc(30);
+        padding-right: remCalc(30);
+        text-align: center;
+        .form-autosignin & {
+            padding-top: remCalc(120px);
+            padding-bottom: remCalc(10px);
+            font-size: remCalc(25);
+            position: relative;
+            &:before {
+                content: " ";
+                width: 100%;
+                min-width: remCalc(510);
+                height: 100%;
+                left: 0;
+                position: absolute;
+                top: 0;
+                z-index: -1;
+                background-image: linear-gradient( 180deg, rgba(255, 255, 255, 0) 50%, #ffffff 85%);
+            }
+        }
+    }
+    &-footer {
+        font-weight: remCalc(14px);
+        padding-top: remCalc(13px);
+        span {
+            padding-right: remCalc(3px);
+        }
+        &-link {
+            color: #5ac8fa;
+            text-decoration: none;
+            &:hover {
+                color: black;
+            }
+        }
+    }
+}
+
+.status-bar {
+    height: 30px;
+    width: 100%;
+    position: relative;
+    &-progress {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        .linear-progress {
+            background: #aad1f9;
+            height: 10px;
+            position: relative;
+            width: 100%;
+            margin: 0 auto;
+            overflow: hidden;
+            animation: start 0.3s ease-in;
+            .bar {
+                position: absolute;
+                background: #106cc8;
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                width: 100%;
+                &1 {
+                    animation: growBar1 2.5s infinite, moveBar1 2.5s infinite;
+                }
+                &2 {
+                    animation: growBar2 2.5s infinite, moveBar2 2.5s infinite;
+                }
+            }
+        }
+    }
+    &-error {
+        background-color: #f4364c;
+        color: white;
+        position: absolute;
+        box-shadow: inset 0 -7px 9px -9px rgba(0, 0, 0, 0.4);
+    }
+}

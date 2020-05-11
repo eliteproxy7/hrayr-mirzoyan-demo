@@ -1,0 +1,43 @@
+<div class="height-100vh signup-wrap" fxLayout="row wrap" fxLayoutAlign="center center" [ngClass]="{'signed-in-success': this.loggedIn}">
+    <div class="signup-container" fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="start stretch" fxFlex="510px" fxFlex.xs="94" fxFlex.sm="80" [@animate]="{value:'*',params:{y:'120px',opacity:'0',delay:'100ms', duration: '400ms'}}">
+        <div class="status-bar" fxLayout="column" fxLayoutAlign="end stretch">
+            <div fxFill class="status-bar-error" *ngIf="errorMsg" fxFlex fxLayoutAlign="center center" class="status-bar-error" [@msgSlideHide]>
+                <span>{{errorMsg}}</span>
+            </div>
+        </div>
+        <div class="signup-holder" fxFlex="100" fxLayout="row wrap" fxLayoutAlign="center center">
+            <h1 class="form-title">Sign-In</h1>
+            <form fxFlex="100" class="signup-form" [formGroup]="signinForm" (ngSubmit)="signin()">
+                <div class="form-group" [ngClass]="{'ng-invalid':(email.errors && email.invalid && email.touched)}">
+                    <div class="form_error" *ngIf="email.errors && email.invalid && email.touched" [@inOutAnimation]>
+                        <small class="text-danger" *ngIf="email.errors.required">Email is required</small>
+                        <small class="text-danger" *ngIf="email.errors.email">Please provide a valid email address</small>
+                    </div>
+                    <label class="form-label" for="name">Email</label>
+                    <input autocomplete="off" data-lpignore="true" formControlName="username" type="email" name="email" [formControl]="signinForm.controls['username']" placeholder="user@email.com" class="form-input" />
+                </div>
+
+                <div class="form-group" [ngClass]="{'ng-invalid':(password.errors && password.invalid && password.touched)}">
+                    <div class="form_error" *ngIf="password.errors && password.invalid && password.touched" [@inOutAnimation]>
+                        <small class="text-danger" *ngIf="password.errors.required">Password is required</small>
+                    </div>
+                    <label class="form-label" for="password">Password</label>
+                    <input data-lpignore="true" formControlName="password" type="password" name="password" [formControl]="signinForm.controls['password']" class="form-input" placeholder="********" />
+                </div>
+                <div fxLayout="row wrap" fxLayoutAlign="center center">
+                    <button class="form-button" #submitButton [disabled]="signinForm.invalid || signingIn">{{(signingIn) ? "Signing In..." : "Sign In"}}</button>
+                </div>
+            </form>
+            <div class="status-bar-progress" *ngIf="signingIn" [@inOutAnimation]>
+                <div class="linear-progress">
+                    <div class="bar bar1"></div>
+                    <div class="bar bar2"></div>
+                </div>
+            </div>
+        </div>
+        <div fxFlex="100" fxLayout="row" fxLayoutAlign="end center" class="form-footer">
+            <span>Not registered?</span>
+            <a class="form-footer-link" routerLink="/sessions/signup">Sign-up</a>
+        </div>
+    </div>
+</div>

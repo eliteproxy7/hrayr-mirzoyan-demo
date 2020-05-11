@@ -1,0 +1,14 @@
+<div class="homepage"
+    [@animate]="{value:' *',params:{opacity:'0', duration: '450ms' }}" [ngClass]="{'page-animateIn': this.animateIn}">
+
+  <div class="homepage_holder" fxLayout="column" fxLayoutAlign="center center">
+    <div class="title">Welcome to Apple</div>
+    <div class="title-sub">See our Products</div>
+  
+    <div class="nav-container">
+     <app-nav-icon></app-nav-icon>
+    </div>
+    <div class="back-logo"><img src="assets/images/logo_gray.svg"></div>
+  </div>
+</div>
+

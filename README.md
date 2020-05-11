@@ -5,6 +5,12 @@ Thank you for your consideration and the oppertunity!
 I made a screen recording in case you want to take a quick look
 https://www.youtube.com/watch?v=3IR-u1LkBJE&feature=youtu.be
 
+
+## Demo
+
+Deployed on Netlify 
+https://festive-torvalds-a6e791.netlify.app/
+
 ## Login / Log Out
 
 I put tother a quick mongoDB + express API and deployed it to Heroku, so the registration and login are based on an API! It uses. JWT token authentication / guard.watch

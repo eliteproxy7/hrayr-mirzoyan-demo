@@ -2,6 +2,9 @@
 
 Thank you for your consideration and the oppertunity! 
 
+I made a screen recording in case you want to take a quick look
+https://www.youtube.com/watch?v=3IR-u1LkBJE&feature=youtu.be
+
 ## Login / Log Out
 
 I put tother a quick mongoDB + express API and deployed it to Heroku, so the registration and login are based on an API! It uses. JWT token authentication / guard.watch
@@ -11,6 +14,8 @@ The signup form has a regex validation on the full name requiring a proper full 
 If you try to register with the same username it will catch the error!
 
 The Log out after you logged in click the Notify Me link on the header
+
+The transitions and animations are all in CSS including the SVG animation I added at the end of signup (just gave it a little touch!). I also added a bit of a pause after Loging in & Signing up so you can clearly see the status micro animations etc.
 
 
 
